@@ -20,10 +20,13 @@ Route::get('/checkout', 'PagesController@checkout');
 Route::get('/contact', 'PagesController@contact');
 Route::get('/error404', 'PagesController@error404');
 Route::get('/faq', 'PagesController@faq');
-Route::get('/myAccount', 'PagesController@myAccount');
-Route::get('/portfolioDetails', 'PagesController@portoflioDetails');
+Route::get('/portfolioDetails', 'PagesController@portfolioDetails');
 Route::get('/portfolio', 'PagesController@portfolio');
 Route::get('/shopGrid', 'PagesController@shopGrid');
 Route::get('/singleProduct', 'PagesController@singleProduct');
 Route::get('/team', 'PagesController@team');
 Route::get('/wishlist', 'PagesController@wishlist');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

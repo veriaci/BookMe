@@ -22,7 +22,6 @@
 										</ul>
 										<ul class="item item03">
 											<li class="title">Shop Page</li>
-											<li><a href="{{ url('/myAccount') }}">My Account</a></li>
 											<li><a href="{{ url('/cart') }}">Cart Page</a></li>
 											<li><a href="{{ url('/checkout') }}">Checkout Page</a></li>
 											<li><a href="{{ url('/wishlist') }}">Wishlist Page</a></li>
@@ -97,7 +96,6 @@
 													<li><a href="{{ url('/portfolioDetails') }}">Portfolio Details</a></li>
 												</ul>
 											</li>
-											<li><a href="{{ url('/myAccount') }}">My Account</a></li>
 											<li><a href="{{ url('/cart') }}">Cart Page</a></li>
 											<li><a href="{{ url('/checkout') }}">Checkout Page</a></li>
 											<li><a href="{{ url('/wishlist') }}">Wishlist Page</a></li>
@@ -202,6 +200,7 @@
 							<li class="setting__bar__icon"><a class="setting__active" href="#"></a>
 								<div class="searchbar__content setting__block">
 									<div class="content-inner">
+										<!--
 										<div class="switcher-currency">
 											<strong class="label switcher-label">
 												<span>Currency</span>
@@ -248,6 +247,7 @@
 												</div>
 											</div>
 										</div>
+										-->
 										<div class="switcher-currency">
 											<strong class="label switcher-label">
 												<span>My Account</span>
@@ -255,11 +255,33 @@
 											<div class="switcher-options">
 												<div class="switcher-currency-trigger">
 													<div class="setting__menu">
-														<span><a href="#">Compare Product</a></span>
-														<span><a href="#">My Account</a></span>
-														<span><a href="#">My Wishlist</a></span>
-														<span><a href="#">Sign In</a></span>
-														<span><a href="#">Create An Account</a></span>
+														<!-- <span><a href="#">Compare Product</a></span> -->
+														<span><a href="{{ url('/wishlist') }}">My Wishlist</a></span>
+														@guest
+															<span>
+																<a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+															</span>
+															@if (Route::has('register'))
+																<span>
+																	<a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+																</span>
+															@endif
+														@else
+															<span>
+																<a href="#"> {{ Auth::user()->name }}</a>
+															</span>
+															<span>
+																<a href="{{ route('logout') }}"
+																onclick="event.preventDefault();
+																				document.getElementById('logout-form').submit();">
+																	{{ __('Logout') }}
+																</a>
+
+																<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+																	@csrf
+																</form>
+															</span>
+														@endguest
 													</div>
 												</div>
 											</div>
@@ -285,7 +307,6 @@
 												<li><a href="{{ url('/portfolioDetails') }}">Portfolio Details</a></li>
 											</ul>
 										</li>
-										<li><a href="{{ url('/myAccount') }}">My Account</a></li>
 										<li><a href="{{ url('/cart') }}">Cart Page</a></li>
 										<li><a href="{{ url('/checkout') }}">Checkout Page</a></li>
 										<li><a href="{{ url('/wishlist') }}">Wishlist Page</a></li>

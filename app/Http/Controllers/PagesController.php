@@ -51,11 +51,6 @@ class PagesController extends Controller
         return view('faq')->with('title', $title);
     }
 
-    public function myAccount(){
-        $title = 'BookMe Account!';
-        return view('my-account')->with('title', $title);
-    }
-
     public function portfolioDetails(){
         $title = 'BookMe Portofolio!';
         return view('portfolio-details')->with('title', $title);
