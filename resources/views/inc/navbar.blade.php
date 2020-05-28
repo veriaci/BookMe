@@ -66,26 +66,7 @@
 										</ul>
 									</div>
 								</li>
-								<li class="drop"><a href="{{ url('/shopGrid') }}">Kids</a>
-									<div class="megamenu mega02">
-										<ul class="item item02">
-											<li class="title">Top Collections</li>
-											<li><a href="{{ url('/shopGrid') }}">American Girl</a></li>
-											<li><a href="{{ url('/shopGrid') }}">Diary Wimpy Kid</a></li>
-											<li><a href="{{ url('/shopGrid') }}">Finding Dory</a></li>
-											<li><a href="{{ url('/shopGrid') }}">Harry Potter</a></li>
-											<li><a href="{{ url('/shopGrid') }}">Land of Stories</a></li>
-										</ul>
-										<ul class="item item02">
-											<li class="title">More For Kids</li>
-											<li><a href="{{ url('/shopGrid') }}">B&N Educators</a></li>
-											<li><a href="{{ url('/shopGrid') }}">B&N Kids' Club</a></li>
-											<li><a href="{{ url('/shopGrid') }}">Kids' Music</a></li>
-											<li><a href="{{ url('/shopGrid') }}">Toys & Games</a></li>
-											<li><a href="{{ url('/shopGrid') }}">Hoodies</a></li>
-										</ul>
-									</div>
-								</li>
+								
 								<li class="drop"><a href="#">Pages</a>
 									<div class="megamenu dropdown">
 										<ul class="item item01">
@@ -105,14 +86,7 @@
 										</ul>
 									</div>
 								</li>
-								<li class="drop"><a href="{{ url('/blog') }}">Blog</a>
-									<div class="megamenu dropdown">
-										<ul class="item item01">
-											<li><a href="{{ url('/blog') }}">Blog Page</a></li>
-											<li><a href="{{ url('/blogDetails') }}">Blog Details</a></li>
-										</ul>
-									</div>
-								</li>
+								
 								<li><a href="{{ url('/contact') }}">Contact</a></li>
 							</ul>
 						</nav>
@@ -133,7 +107,7 @@
 											<span>Cart Subtotal</span>
 										</div>
 										<div class="total_amount text-right">
-											<span>$66.00</span>
+											<span></span>
 										</div>
 										<div class="mini_action checkout">
 											<a class="checkout__btn" href="{{ url('/cart') }}">Go to Checkout</a>
@@ -145,10 +119,10 @@
 														<a href="product-details.html"><img src="images/product/sm-img/1.jpg" alt="product images"></a>
 													</div>
 													<div class="content">
-														<h6><a href="product-details.html">Voyage Yoga Bag</a></h6>
-														<span class="prize">$30.00</span>
+														<h6><a href="product-details.html"></a></h6>
+														<span class="prize"></span>
 														<div class="product_prize d-flex justify-content-between">
-															<span class="qun">Qty: 01</span>
+															<span class="qun"></span>
 															<ul class="d-flex justify-content-end">
 																<li><a href="#"><i class="zmdi zmdi-settings"></i></a></li>
 																<li><a href="#"><i class="zmdi zmdi-delete"></i></a></li>
@@ -161,10 +135,10 @@
 														<a href="product-details.html"><img src="images/product/sm-img/3.jpg" alt="product images"></a>
 													</div>
 													<div class="content">
-														<h6><a href="product-details.html">Impulse Duffle</a></h6>
-														<span class="prize">$40.00</span>
+														<h6><a href="product-details.html"></a></h6>
+														<span class="prize"></span>
 														<div class="product_prize d-flex justify-content-between">
-															<span class="qun">Qty: 03</span>
+															<span class="qun"></span>
 															<ul class="d-flex justify-content-end">
 																<li><a href="#"><i class="zmdi zmdi-settings"></i></a></li>
 																<li><a href="#"><i class="zmdi zmdi-delete"></i></a></li>
@@ -177,10 +151,10 @@
 														<a href="product-details.html"><img src="images/product/sm-img/2.jpg" alt="product images"></a>
 													</div>
 													<div class="content">
-														<h6><a href="product-details.html">Compete Track Tote</a></h6>
-														<span class="prize">$40.00</span>
+														<h6><a href="product-details.html"></a></h6>
+														<span class="prize"></span>
 														<div class="product_prize d-flex justify-content-between">
-															<span class="qun">Qty: 03</span>
+															<span class="qun"></span>
 															<ul class="d-flex justify-content-end">
 																<li><a href="#"><i class="zmdi zmdi-settings"></i></a></li>
 																<li><a href="#"><i class="zmdi zmdi-delete"></i></a></li>

@@ -74,48 +74,48 @@
 				<div class="row">
         			<div class="col-lg-12">
         				<div class="section__title--3 text-center pb--30">
-        					<h2>Our Process Skill Of High</h2>
-        					<p>the right people for your project</p>
+        					<h2>The Founders</h2>
+        					<p>the people behind bookme</p>
         				</div>
         			</div>
         		</div>
         		<div class="row align-items-center">
 					<div class="col-lg-6 col-sm-12 col-12">
         				<div class="content text-left text_style--2">
-    					    <h2>we have skills to show</h2>
+    					    <h2>values we represent</h2>
     					    <div class="skill-container">
     					        <!-- Start single skill -->
     					        <div class="single-skill">
-    					            <p>Customer Favorites</p>
+    					            <p>Integrity</p>
     					            <div class="progress">
-    					                <div class="progress-bar wow fadeInLeft" data-wow-duration="0.8s" data-wow-delay=".5s" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:90%"><span class="pen-lable"></span>
+    					                <div class="progress-bar wow fadeInLeft" data-wow-duration="0.8s" data-wow-delay=".5s" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%"><span class="pen-lable"></span>
     					                </div>
     					            </div>
     					        </div>
     					        <!-- End single skill -->
     					        <!-- Start single skill -->
     					        <div class="single-skill">
-    					            <p>Popular Authors</p>
+    					            <p>Trust</p>
     					            <div class="progress">
-    					                <div class="progress-bar wow fadeInLeft" data-wow-duration="0.8s" data-wow-delay=".5s" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width:95%"><span class="pen-lable"></span>
+    					                <div class="progress-bar wow fadeInLeft" data-wow-duration="0.8s" data-wow-delay=".5s" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%"><span class="pen-lable"></span>
     					                </div>
     					            </div>
     					        </div>
     					        <!-- End single skill -->
     					        <!-- Start single skill -->
     					        <div class="single-skill">
-    					            <p>Bestselling Series</p>
+    					            <p>Honesty</p>
     					            <div class="progress">
-    					                <div class="progress-bar wow fadeInLeft" data-wow-duration="0.8s" data-wow-delay=".5s" role="progressbar" aria-valuenow="93" aria-valuemin="0" aria-valuemax="100" style="width:93%"><span class="pen-lable"></span>
+    					                <div class="progress-bar wow fadeInLeft" data-wow-duration="0.8s" data-wow-delay=".5s" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%"><span class="pen-lable"></span>
     					                </div>
     					            </div>
     					        </div>
     					        <!-- End single skill -->
     					        <!-- Start single skill -->
     					        <div class="single-skill">
-    					            <p>Bargain Books</p>
+    					            <p>Truth</p>
     					            <div class="progress">
-    					                <div class="progress-bar wow fadeInLeft" data-wow-duration="0.8s" data-wow-delay=".5s" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:90%"><span class="pen-lable"></span>
+    					                <div class="progress-bar wow fadeInLeft" data-wow-duration="0.8s" data-wow-delay=".5s" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%"><span class="pen-lable"></span>
     					                </div>
     					            </div>
     					        </div>
@@ -125,11 +125,11 @@
         			</div>
         			<div class="col-lg-6 col-sm-12 col-12">
         				<div class="content">
-        					<h3>Buy Book</h3>
-        					<h2>Different Knowledge</h2>
-        					<p class="mt--20 mb--20">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
-        					<strong>London Address</strong>
-        					<p>34 Parer Place via Musk Avenue Kelvin Grove, QLD, 4059</p>
+        					<h3>Buy or Rent Books</h3>
+        					<h>Different Knowledge Gives Different Opportunities</h>
+        					<p class="mt--20 mb--20"> BookMe is a platform where everbody can do their part to help enrich the knowledge of our society. Give, buy, or rent a book today and help us by expanding our library and choices of useful books.</p>
+        					<strong>University of Indonesia</strong>
+        					<p>Universitas Indonesia, Depok, Indonesia</p>
         				</div>
         			</div>
         		</div>
@@ -142,8 +142,8 @@
         		<div class="row">
         			<div class="col-lg-12">
         				<div class="section__title--3 text-center">
-        					<h2>Meet our team of experts</h2>
-        					<p>the right people for your project</p>
+        					<h2>Meet The Team</h2>
+        					<p>Knights of Knowledge, Guardian of Books</p>
         				</div>
         			</div>
         		</div>
@@ -152,11 +152,11 @@
         			<div class="col-lg-4 col-md-4 col-sm-6 col-12">
         				<div class="wn__team">
         					<div class="thumb">
-        						<img src="images/about/team/1.jpg" alt="Team images">
+        						<img src="images/about/team/farhan.jpg" alt="Team images">
         					</div>
         					<div class="content text-center">
-        						<h4>JOHN SMITH</h4>
-        						<p>Manager</p>
+        						<h4>FARHAN PRAYUDA PUTRA</h4>
+        						<p>Coordinator</p>
         						<ul class="team__social__net">
         							<li><a href="#"><i class="icon-social-twitter icons"></i></a></li>
         							<li><a href="#"><i class="icon-social-tumblr icons"></i></a></li>
@@ -172,10 +172,10 @@
         			<div class="col-lg-4 col-md-4 col-sm-6 col-12">
         				<div class="wn__team">
         					<div class="thumb">
-        						<img src="images/about/team/2.jpg" alt="Team images">
+        						<img src="images/about/team/hanif.jpg" alt="Team images">
         					</div>
         					<div class="content text-center">
-        						<h4>ALICE KIM</h4>
+        						<h4>HANIF IMAM </h4>
         						<p>Co-Founder</p>
         						<ul class="team__social__net">
         							<li><a href="#"><i class="icon-social-twitter icons"></i></a></li>
@@ -192,11 +192,11 @@
         			<div class="col-lg-4 col-md-4 col-sm-6 col-12">
         				<div class="wn__team">
         					<div class="thumb">
-        						<img src="images/about/team/3.jpg" alt="Team images">
+        						<img src="images/about/team/uta.jpg" alt="Team images">
         					</div>
         					<div class="content text-center">
-        						<h4>VICTORIA DOE</h4>
-        						<p>Marketer</p>
+        						<h4>SHAFY SATRIA</h4>
+        						<p>Co-Founder</p>
         						<ul class="team__social__net">
         							<li><a href="#"><i class="icon-social-twitter icons"></i></a></li>
         							<li><a href="#"><i class="icon-social-tumblr icons"></i></a></li>

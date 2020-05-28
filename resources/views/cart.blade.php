@@ -89,26 +89,26 @@
                                     <tbody>
                                         <tr>
                                             <td class="product-thumbnail"><a href="#"><img src="images/product/sm-3/1.jpg" alt="product img"></a></td>
-                                            <td class="product-name"><a href="#">Natoque penatibus</a></td>
-                                            <td class="product-price"><span class="amount">$165.00</span></td>
+                                            <td class="product-name"><a href="#"></a></td>
+                                            <td class="product-price"><span class="amount"></span></td>
                                             <td class="product-quantity"><input type="number" value="1"></td>
-                                            <td class="product-subtotal">$165.00</td>
+                                            <td class="product-subtotal"></td>
                                             <td class="product-remove"><a href="#">X</a></td>
                                         </tr>
                                         <tr>
                                             <td class="product-thumbnail"><a href="#"><img src="images/product/sm-3/2.jpg" alt="product img"></a></td>
-                                            <td class="product-name"><a href="#">Quisque fringilla</a></td>
-                                            <td class="product-price"><span class="amount">$50.00</span></td>
+                                            <td class="product-name"><a href="#"></a></td>
+                                            <td class="product-price"><span class="amount"></span></td>
                                             <td class="product-quantity"><input type="number" value="1"></td>
-                                            <td class="product-subtotal">$50.00</td>
+                                            <td class="product-subtotal"></td>
                                             <td class="product-remove"><a href="#">X</a></td>
                                         </tr>
                                         <tr>
                                             <td class="product-thumbnail"><a href="#"><img src="images/product/sm-3/3.jpg" alt="product img"></a></td>
-                                            <td class="product-name"><a href="#">Vestibulum suscipit</a></td>
-                                            <td class="product-price"><span class="amount">$50.00</span></td>
+                                            <td class="product-name"><a href="#"></a></td>
+                                            <td class="product-price"><span class="amount"></span></td>
                                             <td class="product-quantity"><input type="number" value="1"></td>
-                                            <td class="product-subtotal">$50.00</td>
+                                            <td class="product-subtotal"></td>
                                             <td class="product-remove"><a href="#">X</a></td>
                                         </tr>
                                     </tbody>
@@ -134,13 +134,13 @@
                                     <li>Sub Total</li>
                                 </ul>
                                 <ul class="cart__total__tk">
-                                    <li>$70</li>
-                                    <li>$70</li>
+                                    <li></li>
+                                    <li></li>
                                 </ul>
                             </div>
                             <div class="cart__total__amount">
-                                <span>Grand Total</span>
-                                <span>$140</span>
+                                <span>Total</span>
+                                <span></span>
                             </div>
                         </div>
                     </div>
