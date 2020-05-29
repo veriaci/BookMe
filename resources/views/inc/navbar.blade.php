@@ -22,7 +22,7 @@
 										</ul>
 										<ul class="item item03">
 											<li class="title">Shop Page</li>
-											<li><a href="{{ url('/cart') }}">Cart Page</a></li>
+											<li><a href="{{ route('product.shoppingCart') }}">Cart Page</a></li>
 											<li><a href="{{ url('/checkout') }}">Checkout Page</a></li>
 											<li><a href="{{ url('/wishlist') }}">Wishlist Page</a></li>
 											<li><a href="{{ url('/error404') }}">404 Page</a></li>
@@ -66,7 +66,7 @@
 										</ul>
 									</div>
 								</li>
-								
+
 								<li class="drop"><a href="#">Pages</a>
 									<div class="megamenu dropdown">
 										<ul class="item item01">
@@ -77,7 +77,7 @@
 													<li><a href="{{ url('/portfolioDetails') }}">Portfolio Details</a></li>
 												</ul>
 											</li>
-											<li><a href="{{ url('/cart') }}">Cart Page</a></li>
+											<li><a href="{{ route('product.shoppingCart') }}">Cart Page</a></li>
 											<li><a href="{{ url('/checkout') }}">Checkout Page</a></li>
 											<li><a href="{{ url('/wishlist') }}">Wishlist Page</a></li>
 											<li><a href="{{ url('/error404') }}">404 Page</a></li>
@@ -86,7 +86,7 @@
 										</ul>
 									</div>
 								</li>
-								
+
 								<li><a href="{{ url('/contact') }}">Contact</a></li>
 							</ul>
 						</nav>
@@ -95,8 +95,8 @@
 						<ul class="header__sidebar__right d-flex justify-content-end align-items-center">
 							<li class="shop_search"><a class="search__active" href="#"></a></li>
 							<li class="wishlist"><a href="#"></a></li>
-							<li class="shopcart"><a class="cartbox_active" href="#"><span class="product_qun">5</span></a>
-								<!-- Start Shopping Cart -->
+							<li class="shopcart"><a href="{{ route('product.shoppingCart') }}"><span class="product_qun">{{ Session::has('cart') ? Session::get('cart')->totalQty : '' }}</span></a>
+								<!-- Start Shopping Cart
 								<div class="block-minicart minicart__active">
 									<div class="minicart-content-wrapper">
 										<div class="micart__close">
@@ -110,7 +110,7 @@
 											<span></span>
 										</div>
 										<div class="mini_action checkout">
-											<a class="checkout__btn" href="{{ url('/cart') }}">Go to Checkout</a>
+											<a class="checkout__btn" href="{{ route('product.shoppingCart') }}">Go to Checkout</a>
 										</div>
 										<div class="single__items">
 											<div class="miniproduct">
@@ -165,11 +165,11 @@
 											</div>
 										</div>
 										<div class="mini_action cart">
-											<a class="cart__btn" href="{{ url('/cart') }}">View and edit cart</a>
+											<a class="cart__btn" href="{{ route('product.shoppingCart') }}">View and edit cart</a>
 										</div>
 									</div>
 								</div>
-								<!-- End Shopping Cart -->
+								 End Shopping Cart -->
 							</li>
 							<li class="setting__bar__icon"><a class="setting__active" href="#"></a>
 								<div class="searchbar__content setting__block">
@@ -281,7 +281,7 @@
 												<li><a href="{{ url('/portfolioDetails') }}">Portfolio Details</a></li>
 											</ul>
 										</li>
-										<li><a href="{{ url('/cart') }}">Cart Page</a></li>
+										<li><a href="{{ route('product.shoppingCart') }}">Cart Page</a></li>
 										<li><a href="{{ url('/checkout') }}">Checkout Page</a></li>
 										<li><a href="{{ url('/wishlist') }}">Wishlist Page</a></li>
 										<li><a href="{{ url('/error404') }}">404 Page</a></li>
@@ -309,7 +309,7 @@
 				<!-- End Mobile Menu -->
 	            <div class="mobile-menu d-block d-lg-none">
 	            </div>
-	            <!-- Mobile Menu -->	
-			</div>		
+	            <!-- Mobile Menu -->
+			</div>
 		</header>
 		<!-- //Header -->

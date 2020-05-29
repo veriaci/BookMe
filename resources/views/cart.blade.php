@@ -12,7 +12,7 @@
 	<link rel="apple-touch-icon" href="images/icon.png">
 
 	<!-- Google font (font-family: 'Roboto', sans-serif; Poppins ; Satisfy) -->
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,600,600i,700,700i,800" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
 
@@ -73,7 +73,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 col-sm-12 ol-lg-12">
-                        <form action="#">               
+                        <form action="#">
                             <div class="table-content wnro__table table-responsive">
                                 <table>
                                     <thead>
@@ -82,39 +82,29 @@
                                             <th class="product-name">Product</th>
                                             <th class="product-price">Price</th>
                                             <th class="product-quantity">Quantity</th>
-                                            <th class="product-subtotal">Total</th>
+                                            <th class="product-subtotal">Sub Total</th>
                                             <th class="product-remove">Remove</th>
                                         </tr>
                                     </thead>
+                                    @if(Session::has('cart'))
                                     <tbody>
+                                        @foreach($products as $product)
                                         <tr>
                                             <td class="product-thumbnail"><a href="#"><img src="images/product/sm-3/1.jpg" alt="product img"></a></td>
-                                            <td class="product-name"><a href="#"></a></td>
+                                            <td class="product-name"><a href="#"></a>{{ $product['item']['title'] }}</td>
                                             <td class="product-price"><span class="amount"></span></td>
-                                            <td class="product-quantity"><input type="number" value="1"></td>
-                                            <td class="product-subtotal"></td>
+                                            <td class="product-quantity">{{ $product['qty'] }}</td>
+                                            <td class="product-subtotal">{{ $product['price'] }}</td>
                                             <td class="product-remove"><a href="#">X</a></td>
                                         </tr>
-                                        <tr>
-                                            <td class="product-thumbnail"><a href="#"><img src="images/product/sm-3/2.jpg" alt="product img"></a></td>
-                                            <td class="product-name"><a href="#"></a></td>
-                                            <td class="product-price"><span class="amount"></span></td>
-                                            <td class="product-quantity"><input type="number" value="1"></td>
-                                            <td class="product-subtotal"></td>
-                                            <td class="product-remove"><a href="#">X</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="product-thumbnail"><a href="#"><img src="images/product/sm-3/3.jpg" alt="product img"></a></td>
-                                            <td class="product-name"><a href="#"></a></td>
-                                            <td class="product-price"><span class="amount"></span></td>
-                                            <td class="product-quantity"><input type="number" value="1"></td>
-                                            <td class="product-subtotal"></td>
-                                            <td class="product-remove"><a href="#">X</a></td>
-                                        </tr>
+                                        @endforeach
                                     </tbody>
+                                    @else
+                                        <h1> No Item In Cart</h1>
+                                    @endif
                                 </table>
                             </div>
-                        </form> 
+                        </form>
                         <div class="cartbox__btn">
                             <ul class="cart__btn__list d-flex flex-wrap flex-md-nowrap flex-lg-nowrap justify-content-between">
                                 <li><a href="#">Coupon Code</a></li>
@@ -131,21 +121,19 @@
                             <div class="cartbox-total d-flex justify-content-between">
                                 <ul class="cart__total__list">
                                     <li>Cart total</li>
-                                    <li>Sub Total</li>
                                 </ul>
                                 <ul class="cart__total__tk">
-                                    <li></li>
-                                    <li></li>
+                                    <li>{{ $totalQty }}</li>
                                 </ul>
                             </div>
                             <div class="cart__total__amount">
                                 <span>Total</span>
-                                <span></span>
+                                <span>{{ $totalPrice }}</span>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>  
+            </div>
         </div>
         <!-- cart-main-area end -->
 		@include('inc.footer')
@@ -159,6 +147,6 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/plugins.js"></script>
 	<script src="js/active.js"></script>
-	
+
 </body>
 </html>

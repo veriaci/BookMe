@@ -18,7 +18,7 @@ Route::get('/', [
 Route::get('/about', 'PagesController@about');
 Route::get('/blogDetails', 'PagesController@blogDetails');
 Route::get('/blog', 'PagesController@blog');
-Route::get('/cart', 'PagesController@cart');
+//Route::get('/cart', 'PagesController@cart');
 Route::get('/checkout', 'PagesController@checkout');
 Route::get('/contact', 'PagesController@contact');
 Route::get('/error404', 'PagesController@error404');
@@ -37,4 +37,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/add-to-cart/{id}', [
     'uses' => 'ProductController@getAddToCart',
     'as' => 'product.addToCart'
+]);
+
+Route::get('/shopping-cart', [
+    'uses' => 'ProductController@getCart',
+    'as' => 'product.shoppingCart'
 ]);
