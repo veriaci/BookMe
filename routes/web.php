@@ -11,7 +11,10 @@
 |
 */
 
-Route::get('/', 'PagesController@index');
+Route::get('/', [
+    'uses' => 'PagesController@index',
+    'as' => 'layouts.index'
+]);
 Route::get('/about', 'PagesController@about');
 Route::get('/blogDetails', 'PagesController@blogDetails');
 Route::get('/blog', 'PagesController@blog');
@@ -30,3 +33,8 @@ Route::get('/wishlist', 'PagesController@wishlist');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/add-to-cart/{id}', [
+    'uses' => 'ProductController@getAddToCart',
+    'as' => 'product.addToCart'
+]);

@@ -3,12 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\Product;
+use Illuminate\Support\Facades\DB;
 
 class PagesController extends Controller
 {
     public function index(){
         $title = 'Welcome to BookMe!';
-        return view('index')->with('title', $title);
+        $products = Product::all();
+        //$products = DB::table('products');
+        return view('index', ['products' => $products])->with('title', $title);
+        //return view('index', ['products' => $products]);
     }
 
     public function about(){
@@ -63,7 +69,8 @@ class PagesController extends Controller
 
     public function shopGrid(){
         $title = 'BookMe Shop!';
-        return view('shop-grid')->with('title', $title);
+        $products = Product::paginate(6);
+        return view('shop-grid', ['products' => $products])->with('title', $title);
     }
 
     public function singleProduct(){
