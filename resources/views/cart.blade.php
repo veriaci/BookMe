@@ -71,6 +71,7 @@
         <!-- cart-main-area start -->
         <div class="cart-main-area section-padding--lg bg--white">
             <div class="container">
+                @if(Session::has('cart'))
                 <div class="row">
                     <div class="col-md-12 col-sm-12 ol-lg-12">
                         <form action="#">
@@ -86,7 +87,6 @@
                                             <th class="product-remove">Remove</th>
                                         </tr>
                                     </thead>
-                                    @if(Session::has('cart'))
                                     <tbody>
                                         @foreach($products as $product)
                                         <tr>
@@ -99,9 +99,6 @@
                                         </tr>
                                         @endforeach
                                     </tbody>
-                                    @else
-                                        <h1> No Item In Cart</h1>
-                                    @endif
                                 </table>
                             </div>
                         </form>
@@ -110,7 +107,7 @@
                                 <li><a href="#">Coupon Code</a></li>
                                 <li><a href="#">Apply Code</a></li>
                                 <li><a href="#">Update Cart</a></li>
-                                <li><a href="#">Check Out</a></li>
+                                <li><a href="{{ route('checkout') }}">Check Out</a></li>
                             </ul>
                         </div>
                     </div>
@@ -133,6 +130,9 @@
                         </div>
                     </div>
                 </div>
+                @else
+                    <h1> No Item In Cart</h1>
+                @endif
             </div>
         </div>
         <!-- cart-main-area end -->

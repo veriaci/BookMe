@@ -12,9 +12,9 @@
 	<link rel="apple-touch-icon" href="images/icon.png">
 
 	<!-- Google font (font-family: 'Roboto', sans-serif; Poppins ; Satisfy) -->
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,600,600i,700,700i,800" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
 
 	<!-- Stylesheets -->
 	<link rel="stylesheet" href="css/bootstrap.min.css">
@@ -72,197 +72,52 @@
         <section class="wn__checkout__area section-padding--lg bg__white">
         	<div class="container">
         		<div class="row">
-        			<div class="col-lg-12">
-        				<div class="wn_checkout_wrap">
-        					<div class="checkout_info">
-        						<span>Returning customer ?</span>
-        						<a class="showlogin" href="#">Click here to login</a>
-        					</div>
-        					<div class="checkout_login">
-        						<form class="wn__checkout__form" action="#">
-        							<p>If you have shopped with us before, please enter your details in the boxes below. If you are a new customer please proceed to the Billing & Shipping section.</p>
-
-        							<div class="input__box">
-        								<label>Username or email <span>*</span></label>
-        								<input type="text">
-        							</div>
-
-        							<div class="input__box">
-        								<label>password <span>*</span></label>
-        								<input type="password">
-        							</div>
-        							<div class="form__btn">
-        								<button>Login</button>
-        								<label class="label-for-checkbox">
-        									<input id="rememberme" name="rememberme" value="forever" type="checkbox">
-        									<span>Remember me</span>
-        								</label>
-        								<a href="#">Lost your password?</a>
-        							</div>
-        						</form>
-        					</div>
-        					<div class="checkout_info">
-        						<span>Have a coupon? </span>
-        						<a class="showcoupon" href="#">Click here to enter your code</a>
-        					</div>
-        					<div class="checkout_coupon">
-        						<form action="#">
-        							<div class="form__coupon">
-        								<input type="text" placeholder="Coupon code">
-        								<button>Apply coupon</button>
-        							</div>
-        						</form>
-        					</div>
-        				</div>
-        			</div>
-        		</div>
-        		<div class="row">
         			<div class="col-lg-6 col-12">
         				<div class="customer_details">
+                            <form action="{{ route('checkout') }}" method="post" id="checkout-form">
         					<h3>Billing details</h3>
         					<div class="customar__field">
-        						<div class="margin_between">
-	        						<div class="input_box space_between">
-	        							<label>First name <span>*</span></label>
-	        							<input type="text">
-	        						</div>
-	        						<div class="input_box space_between">
-	        							<label>last name <span>*</span></label>
-	        							<input type="text">
-	        						</div>
-        						</div>
+                                <div class="input_box">
+                                    <label for="name">Name <span>*</span></label>
+                                    <input type="text" placeholder="Your Name" id="name" class="form-control" required>
+                                </div>
         						<div class="input_box">
-        							<label>Company name <span>*</span></label>
-        							<input type="text">
+        							<label for="address">Address <span>*</span></label>
+        							<input type="text" placeholder="Home Address" id="address" class="form-control" required>
         						</div>
-        						<div class="input_box">
-        							<label>Country<span>*</span></label>
-        							<select class="select__option">
-										<option>Select a country…</option>
-										<option>Afghanistan</option>
-										<option>American Samoa</option>
-										<option>Anguilla</option>
-										<option>American Samoa</option>
-										<option>Antarctica</option>
-										<option>Antigua and Barbuda</option>
-        							</select>
-        						</div>
-        						<div class="input_box">
-        							<label>Address <span>*</span></label>
-        							<input type="text" placeholder="Street address">
-        						</div>
-        						<div class="input_box">
-        							<input type="text" placeholder="Apartment, suite, unit etc. (optional)">
-        						</div>
-        						<div class="input_box">
-        							<label>District<span>*</span></label>
-        							<select class="select__option">
-										<option>Select a country…</option>
-										<option>Afghanistan</option>
-										<option>American Samoa</option>
-										<option>Anguilla</option>
-										<option>American Samoa</option>
-										<option>Antarctica</option>
-										<option>Antigua and Barbuda</option>
-        							</select>
-        						</div>
+                                <div class="input_box">
+                                    <label for="card-name">Card Holder Name <span>*</span></label>
+                                    <input type="text" id="card-name" class="form-control" required>
+                                </div>
 								<div class="input_box">
-									<label>Postcode / ZIP <span>*</span></label>
-									<input type="text">
+									<label for="card-number">Credit Card Number <span>*</span></label>
+									<input type="text" id="card-number" class="form-control" required>
 								</div>
 								<div class="margin_between">
 									<div class="input_box space_between">
-										<label>Phone <span>*</span></label>
-										<input type="text">
-									</div>
-
-									<div class="input_box space_between">
-										<label>Email address <span>*</span></label>
-										<input type="email">
-									</div>
-								</div>
-        					</div>
-        					<div class="create__account">
-        						<div class="wn__accountbox">
-	        						<input class="input-checkbox" name="createaccount" value="1" type="checkbox">
-	        						<span>Create an account ?</span>
-        						</div>
-        						<div class="account__field">
-        							<form action="#">
-        								<label>Account password <span>*</span></label>
-        								<input type="text" placeholder="password">
-        							</form>
-        						</div>
-        					</div>
-        				</div>
-        				<div class="customer_details mt--20">
-        					<div class="differt__address">
-	        					<input name="ship_to_different_address" value="1" type="checkbox">
-	        					<span>Ship to a different address ?</span>
-        					</div>
-        					<div class="customar__field differt__form mt--40">
-        						<div class="margin_between">
-	        						<div class="input_box space_between">
-	        							<label>First name <span>*</span></label>
-	        							<input type="text">
-	        						</div>
-	        						<div class="input_box space_between">
-	        							<label>last name <span>*</span></label>
-	        							<input type="text">
-	        						</div>
-        						</div>
-        						<div class="input_box">
-        							<label>Company name <span>*</span></label>
-        							<input type="text">
-        						</div>
-        						<div class="input_box">
-        							<label>Country<span>*</span></label>
-        							<select class="select__option">
-										<option>Select a country…</option>
-										<option>Afghanistan</option>
-										<option>American Samoa</option>
-										<option>Anguilla</option>
-										<option>American Samoa</option>
-										<option>Antarctica</option>
-										<option>Antigua and Barbuda</option>
-        							</select>
-        						</div>
-        						<div class="input_box">
-        							<label>Address <span>*</span></label>
-        							<input type="text" placeholder="Street address">
-        						</div>
-        						<div class="input_box">
-        							<input type="text" placeholder="Apartment, suite, unit etc. (optional)">
-        						</div>
-        						<div class="input_box">
-        							<label>District<span>*</span></label>
-        							<select class="select__option"> 
-										<option>Select a country…</option>
-										<option>Afghanistan</option>
-										<option>American Samoa</option>
-										<option>Anguilla</option>
-										<option>American Samoa</option>
-										<option>Antarctica</option>
-										<option>Antigua and Barbuda</option>
-        							</select>
-        						</div>
-								<div class="input_box">
-									<label>Postcode / ZIP <span>*</span></label>
-									<input type="text">
-								</div>
-								<div class="margin_between">
-									<div class="input_box space_between">
-										<label>Phone <span>*</span></label>
-										<input type="text">
+										<label for="card-expiry-month">Expiration Month <span>*</span></label>
+										<input type="text" id="card-expiry-month" class="form-control" required>
 									</div>
 									<div class="input_box space_between">
-										<label>Email address <span>*</span></label>
-										<input type="email">
+										<label for="card-expiry-year">Expiration Year <span>*</span></label>
+										<input type="text" id="card-expiry-year" class="form-control" required>
 									</div>
 								</div>
+                                <div class="input_box">
+                                    <label for="card-cvc">CVC <span>*</span></label>
+                                    <input type="text" id="card-cvc" class="form-control" required>
+                                </div>
         					</div>
+                                {{ csrf_field() }}
+                                <div class="minicart-content-wrapper">
+                                    <div class="mini_action checkout">
+                                        <a type="submit" class="checkout__btn">Buy Now</a>
+                                    </div>
+                                </div>
+                            </form>
         				</div>
         			</div>
+                    <!-- YOUR ORDER area -->
         			<div class="col-lg-6 col-12 md-mt-40 sm-mt-40">
         				<div class="wn__order__box">
         					<h3 class="onder__title">Your order</h3>
@@ -271,14 +126,14 @@
         						<li>Total</li>
         					</ul>
         					<ul class="order_product">
-        						<li>Buscipit at magna × 1<span>$48.00</span></li>
-        						<li>Buscipit at magna × 1<span>$48.00</span></li>
-        						<li>Buscipit at magna × 1<span>$48.00</span></li>
-        						<li>Buscipit at magna × 1<span>$48.00</span></li>
+                                @foreach($products as $product)
+        						<li>{{ $product['item']['title'] }} × {{ $product['qty'] }}<span>Rp. {{ $product['price'] }}</span></li>
+                                @endforeach
         					</ul>
+                            <!--
         					<ul class="shipping__method">
         						<li>Cart Subtotal <span>$48.00</span></li>
-        						<li>Shipping 
+        						<li>Shipping
         							<ul>
         								<li>
         									<input name="shipping_method[0]" data-index="0" value="legacy_flat_rate" checked="checked" type="radio">
@@ -291,8 +146,9 @@
         							</ul>
         						</li>
         					</ul>
+        					-->
         					<ul class="total__amount">
-        						<li>Order Total <span>$223.00</span></li>
+        						<li>Order Total <span>Rp. {{ $totalPrice }}</span></li>
         					</ul>
         				</div>
 					    <div id="accordion" class="checkout_accordion mt--30" role="tablist">
@@ -354,6 +210,6 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/plugins.js"></script>
 	<script src="js/active.js"></script>
-	
+
 </body>
 </html>

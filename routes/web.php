@@ -19,7 +19,7 @@ Route::get('/about', 'PagesController@about');
 Route::get('/blogDetails', 'PagesController@blogDetails');
 Route::get('/blog', 'PagesController@blog');
 //Route::get('/cart', 'PagesController@cart');
-Route::get('/checkout', 'PagesController@checkout');
+//Route::get('/checkout', 'PagesController@checkout');
 Route::get('/contact', 'PagesController@contact');
 Route::get('/error404', 'PagesController@error404');
 Route::get('/faq', 'PagesController@faq');
@@ -42,4 +42,14 @@ Route::get('/add-to-cart/{id}', [
 Route::get('/shopping-cart', [
     'uses' => 'ProductController@getCart',
     'as' => 'product.shoppingCart'
+]);
+
+Route::get('/checkout', [
+    'uses' => 'ProductController@getCheckout',
+    'as' => 'checkout'
+]);
+
+Route::post('/checkout', [
+    'uses' => 'ProductController@postCheckout',
+    'as' => 'checkout'
 ]);
