@@ -74,6 +74,9 @@
         		<div class="row">
         			<div class="col-lg-6 col-12">
         				<div class="customer_details">
+                            <div id="charge-error" class="aler alert-danger" {{ !Session::has('error') ? 'hidden' : '' }}>
+                                {{ Session::get('error') }}
+                            </div>
                             <form action="{{ route('checkout') }}" method="post" id="checkout-form">
         					<h3>Billing details</h3>
         					<div class="customar__field">
@@ -111,7 +114,7 @@
                                 {{ csrf_field() }}
                                 <div class="minicart-content-wrapper">
                                     <div class="mini_action checkout">
-                                        <a type="submit" class="checkout__btn">Buy Now</a>
+                                        <button type="submit" class="checkout__btn">Buy Now</button>
                                     </div>
                                 </div>
                             </form>
@@ -210,6 +213,8 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/plugins.js"></script>
 	<script src="js/active.js"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="{{ URL::to('js/checkout.js') }}"></script>
 
 </body>
 </html>

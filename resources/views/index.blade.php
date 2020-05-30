@@ -35,6 +35,11 @@
 	<!-- Main wrapper -->
 	<div class="wrapper" id="wrapper">
 		@include('inc.navbar')
+            @if(Session::has('success'))
+                <div id="charge-message" class="alert alert-success">
+                    {{ Session::get('success') }}
+                </div>
+            @endif
 		<!-- Start Search Popup -->
 		<div class="brown--color box-search-content search_active block-bg close__top">
 			<form id="search_mini_form" class="minisearch" action="#">
