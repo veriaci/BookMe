@@ -4,10 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Cart;
 use App\Product;
+use App\Order;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use Session;
+use Auth;
 use Stripe\Stripe;
 use Stripe\Charge;
 
@@ -44,24 +46,31 @@ class ProductController extends Controller
 
     public function postCheckout(Request $request){
         if (!Session::has('cart')){
-            return redirect()->route('cart');
+            return redirect()->route('product.shoppingCart');
         }
         $oldCart = Session::get('cart');
         $cart = new Cart($oldCart);
 
         Stripe::setApiKey('sk_test_NyHxDKoEaKSUi5qG3kImKrgr00h18l1AF0');
         try {
-            Charge::create(array(
+            $charge = Charge::create(array(
                 "amount" => $cart->totalPrice,
                 "currency" => "usd",
                 "source" => 'tok_mastercard',
                 "description" => "Test Charge"
             ));
+            $order = new Order();
+            $order->cart = serialize($cart);
+            $order->address = $request->input('address');
+            $order->name = $request->input('name');
+            $order->payment_id = $charge->id;
+
+            Auth::user()->orders()->save($order);
         } catch (\Exception $e){
             return redirect()->route('checkout')->with('error', $e->getMessage());
         }
 
         Session::forget('cart');
-        return redirect()->route('layout.index')->with('success', 'Checkout Success');
+        return redirect()->route('layouts.index')->with('success', 'Checkout Success');
     }
 }

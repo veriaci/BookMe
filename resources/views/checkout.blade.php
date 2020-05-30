@@ -82,11 +82,11 @@
         					<div class="customar__field">
                                 <div class="input_box">
                                     <label for="name">Name <span>*</span></label>
-                                    <input type="text" placeholder="Your Name" id="name" class="form-control" required>
+                                    <input type="text" placeholder="Your Name" id="name" name="name" class="form-control" required>
                                 </div>
         						<div class="input_box">
         							<label for="address">Address <span>*</span></label>
-        							<input type="text" placeholder="Home Address" id="address" class="form-control" required>
+        							<input type="text" placeholder="Home Address" id="address" name="address" class="form-control" required>
         						</div>
                                 <div class="input_box">
                                     <label for="card-name">Card Holder Name <span>*</span></label>
