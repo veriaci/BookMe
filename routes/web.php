@@ -39,6 +39,16 @@ Route::get('/add-to-cart/{id}', [
     'as' => 'product.addToCart'
 ]);
 
+Route::get('/reduce/{id}', [
+    'uses' => 'ProductController@getReduceByOne',
+    'as' => 'product.reduceByOne'
+]);
+
+Route::get('/remove/{id}', [
+    'uses' => 'ProductController@getRemoveItem',
+    'as' => 'product.remove'
+]);
+
 Route::get('/shopping-cart', [
     'uses' => 'ProductController@getCart',
     'as' => 'product.shoppingCart'
@@ -46,10 +56,12 @@ Route::get('/shopping-cart', [
 
 Route::get('/checkout', [
     'uses' => 'ProductController@getCheckout',
-    'as' => 'checkout'
+    'as' => 'checkout',
+    'middleware' => 'auth'
 ]);
 
 Route::post('/checkout', [
     'uses' => 'ProductController@postCheckout',
-    'as' => 'checkout'
+    'as' => 'checkout',
+    'middleware' => 'auth'
 ]);

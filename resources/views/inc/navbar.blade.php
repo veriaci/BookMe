@@ -242,7 +242,7 @@
 															@endif
 														@else
 															<span>
-																<a href="#"> {{ Auth::user()->name }}</a>
+																<a href="{{ route('home') }}"> {{ Auth::user()->name }}</a>
 															</span>
 															<span>
 																<a href="{{ route('logout') }}"

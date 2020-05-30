@@ -81,9 +81,9 @@
                                         <tr class="title-top">
                                             <th class="product-thumbnail">Image</th>
                                             <th class="product-name">Product</th>
-                                            <th class="product-price">Price</th>
                                             <th class="product-quantity">Quantity</th>
                                             <th class="product-subtotal">Sub Total</th>
+                                            <th class="product-reduce">Reduce By One</th>
                                             <th class="product-remove">Remove</th>
                                         </tr>
                                     </thead>
@@ -92,10 +92,10 @@
                                         <tr>
                                             <td class="product-thumbnail"><a href="#"><img src="images/product/sm-3/1.jpg" alt="product img"></a></td>
                                             <td class="product-name"><a href="#"></a>{{ $product['item']['title'] }}</td>
-                                            <td class="product-price"><span class="amount"></span></td>
                                             <td class="product-quantity">{{ $product['qty'] }}</td>
                                             <td class="product-subtotal">{{ $product['price'] }}</td>
-                                            <td class="product-remove"><a href="#">X</a></td>
+                                            <td class="product-reduce"><a href="{{ route('product.reduceByOne', ['id' => $product['item']['id']]) }}">X</a></td>
+                                            <td class="product-remove"><a href="{{ route('product.remove', ['id' => $product['item']['id']]) }}">X</a></td>
                                         </tr>
                                         @endforeach
                                     </tbody>
@@ -104,9 +104,6 @@
                         </form>
                         <div class="cartbox__btn">
                             <ul class="cart__btn__list d-flex flex-wrap flex-md-nowrap flex-lg-nowrap justify-content-between">
-                                <li><a href="#">Coupon Code</a></li>
-                                <li><a href="#">Apply Code</a></li>
-                                <li><a href="#">Update Cart</a></li>
                                 <li><a href="{{ route('checkout') }}">Check Out</a></li>
                             </ul>
                         </div>
