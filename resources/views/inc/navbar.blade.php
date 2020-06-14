@@ -13,60 +13,8 @@
 						<nav class="mainmenu__nav">
 							<ul class="meninmenu d-flex justify-content-start">
 								<li class="drop with--one--item"><a href="{{ url('/') }}">Home</a></li>
-								<li class="drop"><a href="#">Shop</a>
-									<div class="megamenu mega03">
-										<ul class="item item03">
-											<li class="title">Shop Layout</li>
-											<li><a href="{{ url('/shopGrid') }}">Shop Grid</a></li>
-											<li><a href="{{ url('/singleProduct') }}">Single Product</a></li>
-										</ul>
-										<ul class="item item03">
-											<li class="title">Shop Page</li>
-											<li><a href="{{ route('product.shoppingCart') }}">Cart Page</a></li>
-											<li><a href="{{ url('/checkout') }}">Checkout Page</a></li>
-											<li><a href="{{ url('/wishlist') }}">Wishlist Page</a></li>
-											<li><a href="{{ url('/error404') }}">404 Page</a></li>
-											<li><a href="{{ url('/faq') }}">Faq Page</a></li>
-										</ul>
-										<ul class="item item03">
-											<li class="title">Bargain Books</li>
-											<li><a href="{{ url('/shopGrid') }}">Bargain Bestsellers</a></li>
-											<li><a href="{{ url('/shopGrid') }}">Activity Kits</a></li>
-											<li><a href="{{ url('/shopGrid') }}">B&N Classics</a></li>
-											<li><a href="{{ url('/shopGrid') }}">Books Under $5</a></li>
-											<li><a href="{{ url('/shopGrid') }}">Bargain Books</a></li>
-										</ul>
-									</div>
+								<li class="drop"><a href="{{ url('/shopGrid') }}">Shop</a>
 								</li>
-								<li class="drop"><a href="{{ url('/shopGrid') }}">Books</a>
-									<div class="megamenu mega03">
-										<ul class="item item03">
-											<li class="title">Categories</li>
-											<li><a href="{{ url('/shopGrid') }}">Biography </a></li>
-											<li><a href="{{ url('/shopGrid') }}">Business </a></li>
-											<li><a href="{{ url('/shopGrid') }}">Cookbooks </a></li>
-											<li><a href="{{ url('/shopGrid') }}">Health & Fitness </a></li>
-											<li><a href="{{ url('/shopGrid') }}">History </a></li>
-										</ul>
-										<ul class="item item03">
-											<li class="title">Customer Favourite</li>
-											<li><a href="{{ url('/shopGrid') }}">Mystery</a></li>
-											<li><a href="{{ url('/shopGrid') }}">Religion & Inspiration</a></li>
-											<li><a href="{{ url('/shopGrid') }}">Romance</a></li>
-											<li><a href="{{ url('/shopGrid') }}">Fiction/Fantasy</a></li>
-											<li><a href="{{ url('/shopGrid') }}">Sleeveless</a></li>
-										</ul>
-										<ul class="item item03">
-											<li class="title">Collections</li>
-											<li><a href="{{ url('/shopGrid') }}">Science </a></li>
-											<li><a href="{{ url('/shopGrid') }}">Fiction/Fantasy</a></li>
-											<li><a href="{{ url('/shopGrid') }}">Self-Improvemen</a></li>
-											<li><a href="{{ url('/shopGrid') }}">Home & Garden</a></li>
-											<li><a href="{{ url('/shopGrid') }}">Humor Books</a></li>
-										</ul>
-									</div>
-								</li>
-
 								<li class="drop"><a href="#">Pages</a>
 									<div class="megamenu dropdown">
 										<ul class="item item01">
@@ -96,8 +44,10 @@
 					</div>
 					<div class="col-md-6 col-sm-6 col-6 col-lg-2">
 						<ul class="header__sidebar__right d-flex justify-content-end align-items-center">
+                            <!--
 							<li class="shop_search"><a class="search__active" href="#"></a></li>
 							<li class="wishlist"><a href="#"></a></li>
+							-->
 							<li class="shopcart"><a href="{{ route('product.shoppingCart') }}"><span class="product_qun">{{ Session::has('cart') ? Session::get('cart')->totalQty : '' }}</span></a>
 								<!-- Start Shopping Cart
 								<div class="block-minicart minicart__active">

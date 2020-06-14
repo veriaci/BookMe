@@ -43,6 +43,11 @@ Route::get('/singleProduct/{id}', [
     'as' => 'single.product'
 ]);
 
+Route::get('/rent/{id}', [
+    'uses' => 'ProductController@postRent',
+    'as' => 'product.rent'
+]);
+
 Route::get('/add-to-cart/{id}', [
     'uses' => 'ProductController@getAddToCart',
     'as' => 'product.addToCart'

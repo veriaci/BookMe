@@ -78,7 +78,7 @@ class PagesController extends Controller
 
     public function shopGrid(){
         $title = 'BookMe Shop!';
-        $products = Product::paginate(9);
+        $products = Product::paginate(12);
         return view('shop-grid', ['products' => $products])->with('title', $title);
     }
 

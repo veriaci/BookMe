@@ -29,6 +29,9 @@ class HomeController extends Controller
             $order->cart = unserialize($order->cart);
             return $order;
         });
-        return view('home', ['orders' => $orders]);
+
+        $rents = Auth::user()->rents;
+
+        return view('home', ['orders' => $orders, 'rents' => $rents]);
     }
 }

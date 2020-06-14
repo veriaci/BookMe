@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Cart;
 use App\Product;
 use App\Order;
+use App\Rent;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -100,5 +102,16 @@ class ProductController extends Controller
 
         Session::forget('cart');
         return redirect()->route('layouts.index')->with('success', 'Checkout Success');
+    }
+
+    public function postRent($id){
+        $nextWeek = Carbon::now()->addDays(7);
+
+        $rent = new Rent();
+        $rent->product_id = $id;
+        $rent->due_date = $nextWeek;
+
+        Auth::user()->rents()->save($rent);
+        return back()->with('success', 'Checkout Success');
     }
 }

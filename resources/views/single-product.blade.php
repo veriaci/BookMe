@@ -33,15 +33,6 @@
                         <div class="col-lg-6 col-12">
                             <div class="product__info__main">
                                 <h1>{{ $product->title }}</h1>
-                                <div class="product-reviews-summary d-flex">
-                                    <ul class="rating-summary d-flex">
-                                        <li><i class="zmdi zmdi-star-outline"></i></li>
-                                        <li><i class="zmdi zmdi-star-outline"></i></li>
-                                        <li><i class="zmdi zmdi-star-outline"></i></li>
-                                        <li class="off"><i class="zmdi zmdi-star-outline"></i></li>
-                                        <li class="off"><i class="zmdi zmdi-star-outline"></i></li>
-                                    </ul>
-                                </div>
                                 <div class="price-box">
                                     <span>Rp. {{ $product->price }}</span>
                                 </div>
@@ -55,6 +46,7 @@
                                     <div class="cartbox__btn">
                                         <ul class="cart__btn__list d-flex flex-wrap flex-md-nowrap flex-lg-nowrap justify-content-between">
                                             <li><a href="{{ route('product.addToCart', ['id' => $product->id]) }}">Add to Cart</a></li>
+                                            <li><a href="{{ route('product.rent', ['id' => $product->id]) }}">Rent</a></li>
                                         </ul>
                                     </div>
                                 </div>
