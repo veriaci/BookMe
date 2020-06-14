@@ -5,7 +5,7 @@
 					<div class="col-md-6 col-sm-6 col-6 col-lg-2">
 						<div class="logo">
 							<a href="{{ url('/') }}">
-								<img src="images/logo/logo.png" alt="logo images" height="50" width="50">
+								<img src="{{ asset('images/logo/logo.png') }}" alt="logo images" height="50" width="50">
 							</a>
 						</div>
 					</div>
@@ -86,6 +86,9 @@
 										</ul>
 									</div>
 								</li>
+								<li class="drop with--one--item"><a href="{{ url('/howto') }}"> How To 'BookMe'</a></li>
+								<li class="drop with--one--item"><a href="{{ url('/history') }}"> Our History</a></li>
+								<li class="drop with--one--item"><a href="{{ url('/contribute') }}"> Contribute</a></li>
 
 								<li><a href="{{ url('/contact') }}">Contact</a></li>
 							</ul>

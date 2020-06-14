@@ -113,14 +113,14 @@
 					<div class="product product__style--3">
 						<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 							<div class="product__thumb">
-								<a class="first__img" href="{{ url('/singleProduct') }}"><img src="{{ $product->imagePath }}" alt="product image"></a>
-								<a class="second__img animation1" href="{{ url('/singleProduct') }}"><img src="images/books/paradigma_2.jpg" alt="product image"></a>
-								<div class="hot__box">
+                                <a class="first__img" href="{{ route('single.product', ['id' => $product->id]) }}"><img width="270" height="340" src="{{ $product->imagePath }}" alt="product image"></a>
+                                <a class="second__img animation1" href="{{ route('single.product', ['id' => $product->id]) }}"><img width="405" height="510" src="{{ $product->imagePath }}" alt="product image"></a>
+                                <div class="hot__box">
 									<span class="hot-label">NEW PRODUCT</span>
 								</div>
 							</div>
 							<div class="product__content content--center">
-								<h4><a href="{{ url('/singleProduct') }}"></a>{{ $product->title }}</h4>
+								<h4><a href="{{ route('single.product', ['id' => $product->id]) }}"></a>{{ $product->title }}</h4>
 								<ul class="prize d-flex">
 									<li>Rp. {{ $product->price }}</li>
                                     <li class="old_prize"></li>
@@ -183,14 +183,14 @@
 								<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 									<div class="product product__style--3">
 										<div class="product__thumb">
-											<a class="first__img" href="{{ url('/singleProduct') }}"><img src="{{ $product->imagePath }}" alt="product image"></a>
-											<a class="second__img animation1" href="{{ url('/singleProduct') }}"><img src="images/books/paradigma_2.jpg" alt="product image"></a>
-											<div class="hot__box">
+                                            <a class="first__img" href="{{ route('single.product', ['id' => $product->id]) }}"><img width="270" height="340" src="{{ $product->imagePath }}" alt="product image"></a>
+                                            <a class="second__img animation1" href="{{ route('single.product', ['id' => $product->id]) }}"><img width="405" height="510" src="{{ $product->imagePath }}" alt="product image"></a>
+                                            <div class="hot__box">
 												<span class="hot-label">BEST SALER</span>
 											</div>
 										</div>
 										<div class="product__content content--center content--center">
-                                            <h4><a href="{{ url('/singleProduct') }}"></a>{{ $product->title }}</h4>
+                                            <h4><a href="{{ route('single.product', ['id' => $product->id]) }}"></a>{{ $product->title }}</h4>
                                             <ul class="prize d-flex">
                                                 <li>Rp. {{ $product->price }}</li>
                                             </ul>
@@ -243,7 +243,7 @@
                 @foreach($products->take(8) as $product)
 				<div class="product product__style--3">
 					<div class="product__thumb">
-						<a class="first__img" href="{{ url('/singleProduct') }}"><img src="{{ $product->imagePath }}" alt="product image"></a>
+						<a class="first__img" href="{{ route('product.addToCart', ['id' => $product->id]) }}"><img src="{{ $product->imagePath }}" alt="product image"></a>
 					</div>
 					<div class="product__content content--center">
 						<div class="action">

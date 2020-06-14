@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use App\Http\Controllers\Controller;
 use App\Product;
 use Illuminate\Support\Facades\DB;
@@ -56,6 +57,14 @@ class PagesController extends Controller
         $title = 'BookMe FAQs!';
         return view('faq')->with('title', $title);
     }
+    public function howto(){
+        $title = 'How to order!';
+        return view('howto')->with('title', $title);
+    }
+    public function history(){
+        $title = 'BookMe History';
+        return view('history')->with('title', $title);
+    }
 
     public function portfolioDetails(){
         $title = 'BookMe Portofolio!';
@@ -69,13 +78,14 @@ class PagesController extends Controller
 
     public function shopGrid(){
         $title = 'BookMe Shop!';
-        $products = Product::paginate(6);
+        $products = Product::paginate(9);
         return view('shop-grid', ['products' => $products])->with('title', $title);
     }
 
-    public function singleProduct(){
+    public function show($id){
         $title = 'BookMe Product!';
-        return view('single-product')->with('title', $title);
+        $product = Product::find($id);
+        return view('single-product')->with('product' , $product);
     }
 
     public function team(){
@@ -86,5 +96,9 @@ class PagesController extends Controller
     public function wishlist(){
         $title = 'BookMe Wishlist!';
         return view('wishlist')->with('title', $title);
+    }
+    public function submit(){
+        $title = 'BookMe submit!';
+        return view('submit')->with('title', $title);
     }
 }

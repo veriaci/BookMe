@@ -58,7 +58,7 @@
                         <div class="bradcaump__inner text-center">
                         	<h2 class="bradcaump-title">Shop Grid</h2>
                             <nav class="bradcaump-content">
-                              <a class="breadcrumb_item" href="index.html">Home</a>
+                              <a class="breadcrumb_item" href="{{ url('/') }}">Home</a>
                               <span class="brd-separetor">/</span>
                               <span class="breadcrumb_item active">Shop Grid</span>
                             </nav>
@@ -150,7 +150,7 @@
 			                            <a class="nav-item nav-link active" data-toggle="tab" href="#nav-grid" role="tab"><i class="fa fa-th"></i></a>
 			                            <a class="nav-item nav-link" data-toggle="tab" href="#nav-list" role="tab"><i class="fa fa-list"></i></a>
 			                        </div>
-			                        <p>Showing 1–12 of 40 results</p>
+			                        <p>Showing 9 results</p>
 			                        <div class="orderby__wrapper">
 			                        	<span>Sort By</span>
 			                        	<select class="shot__byselect">
@@ -172,14 +172,14 @@
 	        						<!-- Start Single Product -->
 		        					<div class="product product__style--3 col-lg-4 col-md-4 col-sm-6 col-12">
 			        					<div class="product__thumb">
-                                            <a class="first__img" href="{{ url('/singleProduct') }}"><img src="{{ $product->imagePath }}" alt="product image"></a>
-                                            <a class="second__img animation1" href="{{ url('/singleProduct') }}"><img src="images/books/paradigma_2.jpg" alt="product image"></a>
+                                            <a class="first__img" href="{{ route('single.product', ['id' => $product->id]) }}"><img width="270" height="340" src="{{ $product->imagePath }}" alt="product image"></a>
+                                            <a class="second__img animation1" href="{{ route('single.product', ['id' => $product->id]) }}"><img width="405" height="510" src="{{ $product->imagePath }}" alt="product image"></a>
 											<div class="hot__box">
 												<span class="hot-label">BEST SELLER</span>
 											</div>
 										</div>
 										<div class="product__content content--center">
-                                            <h4><a href="{{ url('/singleProduct') }}"></a>{{ $product->title }}</h4>
+                                            <h4><a href="{{ route('single.product', ['id' => $product->id]) }}"></a>{{ $product->title }}</h4>
                                             <ul class="prize d-flex">
                                                 <li>Rp. {{ $product->price }}</li>
                                                 <li class="old_prize"></li>

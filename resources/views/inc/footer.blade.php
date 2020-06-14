@@ -7,7 +7,7 @@
 							<div class="footer__widget footer__menu">
 								<div class="ft__logo">
 									<a href="{{ url('/') }}">
-										<img src="images/logo/3.png" width="250px" height="250px" alt="logo">
+										<img src="{{ asset('images/logo/3.png') }}" width="250px" height="250px" alt="logo">
 									</a>
 									<p>BookMe is your GoTo choice of online library and bookshops. Explore our vast array collection of books for your reading.</p>
 								</div>

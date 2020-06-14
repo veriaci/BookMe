@@ -26,13 +26,22 @@ Route::get('/faq', 'PagesController@faq');
 Route::get('/portfolioDetails', 'PagesController@portfolioDetails');
 Route::get('/portfolio', 'PagesController@portfolio');
 Route::get('/shopGrid', 'PagesController@shopGrid');
-Route::get('/singleProduct', 'PagesController@singleProduct');
+//Route::get('/singleProduct', 'PagesController@singleProduct');
 Route::get('/team', 'PagesController@team');
 Route::get('/wishlist', 'PagesController@wishlist');
-
+Route::get('/howto', 'PagesController@howto');
+Route::get('/history', 'PagesController@history');
+Route::get('/contribute', 'PagesController@submit');
+Route::post('/contributed', 'PagesController@submit');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+//Route::resource('single', 'SingleController');
+Route::get('/singleProduct/{id}', [
+    'uses' => 'PagesController@show',
+    'as' => 'single.product'
+]);
 
 Route::get('/add-to-cart/{id}', [
     'uses' => 'ProductController@getAddToCart',

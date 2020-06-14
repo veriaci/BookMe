@@ -1,0 +1,42 @@
+<?php
+ 
+namespace App\Http\Controllers;
+ 
+use Illuminate\Http\Request;
+ 
+use App\Gambar;
+ 
+class UploadController extends Controller
+{
+	public function upload(){
+		$product = Product::get();
+		return view('upload',['product' => $product]);
+	}
+ 
+	public function proses_upload(Request $request){
+		$this->validate($request, [
+			'imagePath' => ['required','string','max:255'],
+            'title' => ['required', 'string', 'max:255'],
+            'autho' => ['required', 'string', 'max:255'],
+            'description' => ['required', 'string', 'max:255'],
+            'price' => ['required', 'integer']
+       
+		]);
+ 
+		// menyimpan data file yang diupload ke variabel $file
+		$file = $request->file('file');
+ 
+		$nama_file = time()."_".$file->getClientOriginalName();
+ 
+      	        // isi dengan nama folder tempat kemana file diupload
+		$tujuan_upload = 'data_file';
+		$file->move($tujuan_upload,$nama_file);
+ 
+		Gambar::create([
+			'file' => $nama_file,
+			'keterangan' => $request->keterangan,
+		]);
+ 
+		return redirect()->back();
+	}
+}
