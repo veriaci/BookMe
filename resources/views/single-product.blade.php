@@ -45,8 +45,11 @@
                                 <div class="box-tocart d-flex">
                                     <div class="cartbox__btn">
                                         <ul class="cart__btn__list d-flex flex-wrap flex-md-nowrap flex-lg-nowrap justify-content-between">
-                                            <li><a href="{{ route('product.addToCart', ['id' => $product->id]) }}">Add to Cart</a></li>
-                                            <li><a href="{{ route('product.rent', ['id' => $product->id]) }}">Rent</a></li>
+                                            @if($product->types == "rent" )
+                                                <li><a href="{{ route('product.rent', ['id' => $product->id]) }}">Rent</a></li>
+                                            @else
+                                                <li><a href="{{ route('product.addToCart', ['id' => $product->id]) }}">Add to Cart</a></li>
+                                            @endif
                                         </ul>
                                     </div>
                                 </div>
