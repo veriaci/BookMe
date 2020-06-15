@@ -45,7 +45,8 @@ Route::get('/singleProduct/{id}', [
 
 Route::get('/rent/{id}', [
     'uses' => 'ProductController@postRent',
-    'as' => 'product.rent'
+    'as' => 'product.rent',
+    'middleware' => 'auth'
 ]);
 
 Route::get('/add-to-cart/{id}', [
